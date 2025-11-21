@@ -15,7 +15,7 @@ let chatHistory = [
   {
     role: "assistant",
     content:
-      "Hello! I'm an LLM chat app powered by Cloudflare Workers AI. How can I help you today?",
+      "### Hello there! I'm an LLM Haiku poet, here to give you a hand with your writing.\nIf you write a haiku, I'll help you refine it or suggest improvements. Let's create some beautiful poetry together!",
   },
 ];
 let isProcessing = false;
