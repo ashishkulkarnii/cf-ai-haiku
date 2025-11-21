@@ -138,28 +138,30 @@
   </head>
   <body>
     <header>
-      <h1>Cloudflare AI Chat</h1>
+      <h1>Haiku Sensei</h1>
       <p>Powered by Cloudflare Workers AI</p>
     </header>
 
     <div class="chat-container">
       <div id="chat-messages" class="chat-messages">
         <div class="message assistant-message">
+          <h3>
+            Hello there! I'm an LLM Haiku poet, here to give you a hand with your writing.
+          </h3>
           <p>
-            Hello! I'm an LLM chat app powered by Cloudflare Workers AI. How can
-            I help you today?
+            If you write a haiku, I'll help you refine it or suggest improvements. Let's create some beautiful poetry together!
           </p>
         </div>
       </div>
 
       <div class="typing-indicator" id="typing-indicator">
-        AI is thinking...
+        Sensei is thinking...
       </div>
 
       <div class="message-input">
         <textarea
           id="user-input"
-          placeholder="Type your message here..."
+          placeholder="Haiku-craft here..."
           rows="1"
           autofocus
         ></textarea>
