@@ -113,7 +113,16 @@ async function sendMessage() {
           if (jsonData.response) {
             // Append new content to existing text
             responseText += jsonData.response;
-            assistantMessageEl.querySelector("p").textContent = responseText;
+
+            // Render markdown safely using marked + DOMPurify
+            try {
+              assistantMessageEl.querySelector("p").innerHTML = DOMPurify.sanitize(
+                marked.parse(responseText),
+              );
+            } catch (e) {
+              // Fallback to text if parser isn't available or fails
+              assistantMessageEl.querySelector("p").textContent = responseText;
+            }
 
             // Scroll to bottom
             chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -150,7 +159,15 @@ async function sendMessage() {
 function addMessageToChat(role, content) {
   const messageEl = document.createElement("div");
   messageEl.className = `message ${role}-message`;
-  messageEl.innerHTML = `<p>${content}</p>`;
+  const p = document.createElement("p");
+  try {
+    // Parse markdown and sanitize before inserting as HTML
+    p.innerHTML = DOMPurify.sanitize(marked.parse(content));
+  } catch (e) {
+    // Fallback to plain text
+    p.textContent = content;
+  }
+  messageEl.appendChild(p);
   chatMessages.appendChild(messageEl);
 
   // Scroll to bottom
