@@ -22,29 +22,3 @@ A simple LLM that helps with haiku authoring, using Cloudflare Workers AI with s
 ## Usage
 
 Visit the chatbot at: https://cf-ai-haiku.ashish2002kulkarni.workers.dev/
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or newer)
-- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
-- A Cloudflare account with Workers AI access
-
-### Installation
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/ashishkulkarnii/cf_ai_haiku
-   cd templates/llm-chat-app
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Generate Worker type definitions:
-   ```bash
-   npm run cf-typegen
-   ```
