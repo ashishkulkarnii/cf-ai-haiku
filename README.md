@@ -34,7 +34,7 @@ Visit the chatbot at: https://cf-ai-haiku.ashish2002kulkarni.workers.dev/
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/cloudflare/templates.git
+   git clone https://github.com/ashishkulkarnii/cf_ai_haiku
    cd templates/llm-chat-app
    ```
 
